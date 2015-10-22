@@ -21,27 +21,22 @@ public class TodoList {
 
     private List<Item> items;
 
-    @JsonCreator
-    public TodoList(
-        @JsonProperty("id") Long id,
-        @JsonProperty("items") List<Item> items
-    ) {
-        this.id = id;
-        this.items = items;
-    }
-
+    @JsonProperty("id")
     public Long getId() {
         return id;
     }
 
+    @JsonProperty("id")
     public void setId(Long id) {
         this.id = id;
     }
 
+    @JsonProperty("items")
     public List<Item> getItems() {
         return items;
     }
 
+    @JsonProperty("items")
     public void setItems(List<Item> items) {
         this.items = items;
     }

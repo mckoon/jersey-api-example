@@ -22,11 +22,11 @@ public class UserTest {
 
     @Test
     public void testJsonSerializeDeserialize() throws Exception {
-        User original = new User(
-                1234L,
-                "John Doe",
-                "jdoe3@gmail.biz"
-        );
+        User original = new User();
+
+        original.setId(1234L);
+        original.setName("John Doe");
+        original.setEmail("jdoe3@gmail.biz");
 
         String json = objectMapper.writeValueAsString(original);
 

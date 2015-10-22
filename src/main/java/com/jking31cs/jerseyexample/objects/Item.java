@@ -12,27 +12,22 @@ public class Item {
     private boolean done;
     private String message;
 
-    @JsonCreator
-    public Item(
-            @JsonProperty("done") boolean done,
-            @JsonProperty("message") String message) {
-        this.done = done;
-        this.message = message;
-
-    }
-
+    @JsonProperty("done")
     public boolean isDone() {
         return done;
     }
 
+    @JsonProperty("message")
     public String getMessage() {
         return message;
     }
 
+    @JsonProperty("done")
     public void setDone(boolean done) {
         this.done = done;
     }
 
+    @JsonProperty("message")
     public void setMessage(String message) {
         this.message = message;
     }
